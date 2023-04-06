@@ -100,8 +100,8 @@ summary(data %>% select(where(is.numeric)))
 summary(data$lead_time)
 plot(data$lead_time)
 qqnorm(data$lead_time)
-ggplot(data, aes(x=lead_time)) + 
-  geom_boxplot(fill = "#60cde5")
+# ggplot(data, aes(x=lead_time)) + 
+#   geom_boxplot(fill = "#60cde5")
 
 data %>% group_by(lead_time) %>% filter(lead_time > 600) %>%  nrow()
 data %>% group_by(lead_time) %>% filter(lead_time > 610) %>%   print(n = Inf)
@@ -110,8 +110,8 @@ data %>% group_by(lead_time) %>% filter(lead_time > 610) %>%   print(n = Inf)
 summary(data$stays_in_weekend_nights)
 plot(data$stays_in_weekend_nights)
 qqnorm(data$stays_in_weekend_nights)
-ggplot(data, aes(x=stays_in_weekend_nights)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=stays_in_weekend_nights)) + 
+#   geom_boxplot(fill = "#16ec73")
 #data %>%  select(stays_in_weekend_nights) %>% filter(stays_in_weekend_nights > 10) %>%   print(n = Inf)
 
 #data %>%  select(lead_time, arrival_date_day_of_month, arrival_date_month, arrival_date_year,  stays_in_weekend_nights, stays_in_week_nights, reservation_status, reservation_status_date) %>% filter(stays_in_weekend_nights > 10)
@@ -119,8 +119,8 @@ ggplot(data, aes(x=stays_in_weekend_nights)) +
 summary(data$stays_in_week_nights)
 plot(data$stays_in_week_nights)
 qqnorm(data$stays_in_week_nights)
-ggplot(data, aes(x=stays_in_week_nights)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=stays_in_week_nights)) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>% group_by(stays_in_week_nights) %>% filter(stays_in_week_nights > 30) %>%   print(n = Inf)
 
@@ -128,8 +128,8 @@ data %>% group_by(stays_in_week_nights) %>% filter(stays_in_week_nights > 30) %>
 summary(data$adults)
 plot(data$adults)
 qqnorm(data$adults)
-ggplot(data, aes(x=adults)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=adults)) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>%  group_by(children) %>%   filter(adults == 0 & children == 0 & babies == 0 ) %>%   print(n = Inf)
 data %>%  group_by(adults) %>%   filter(adults > 4) %>%   print(n = Inf)
@@ -137,22 +137,22 @@ data %>%  group_by(adults) %>%   filter(adults > 4) %>%   print(n = Inf)
 summary(data$children)
 plot(data$children)
 qqnorm(data$children)
-ggplot(data, aes(x=children)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=children)) + 
+#   geom_boxplot(fill = "#16ec73")
 
 
 summary(data$babies)
 plot(data$babies)
 qqnorm(data$babies)
-ggplot(data, aes(x=babies)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=babies)) + 
+#   geom_boxplot(fill = "#16ec73")
 
 
 summary(data$previous_cancellations)
 plot(data$previous_cancellations)
 qqnorm(data$previous_cancellations)
-ggplot(data, aes(x=previous_cancellations)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=previous_cancellations)) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>%  group_by(previous_cancellations) %>%   filter(previous_cancellations > 10) %>%   print(n = Inf)
 
@@ -160,8 +160,8 @@ data %>%  group_by(previous_cancellations) %>%   filter(previous_cancellations >
 summary(data$previous_bookings_not_canceled)
 plot(data$previous_bookings_not_canceled)
 qqnorm(data$previous_bookings_not_canceled)
-ggplot(data, aes(x=previous_bookings_not_canceled)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=previous_bookings_not_canceled)) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>%  group_by(previous_bookings_not_canceled) %>%   filter(previous_bookings_not_canceled > 25) %>%   print(n = Inf)
 
@@ -169,16 +169,16 @@ data %>%  group_by(previous_bookings_not_canceled) %>%   filter(previous_booking
 summary(data$booking_changes)
 plot(data$booking_changes)
 qqnorm(data$booking_changes)
-ggplot(data, aes(x=booking_changes)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=booking_changes)) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>%  group_by(booking_changes) %>%   filter(booking_changes > 5) %>%   print(n = Inf)
 
 summary(data$days_in_waiting_list)
 plot(data$days_in_waiting_list)
 qqnorm(data$days_in_waiting_list)
-ggplot(data, aes(x=log(days_in_waiting_list))) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=log(days_in_waiting_list))) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>%  group_by(days_in_waiting_list) %>%   filter(days_in_waiting_list > 200) %>%   print(n = Inf)
 
@@ -186,19 +186,19 @@ data %>%  group_by(days_in_waiting_list) %>%   filter(days_in_waiting_list > 200
 summary(data$adr)
 plot(data$adr)
 qqnorm(data$adr)
-ggplot(data, aes(x=log(adr))) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=log(adr))) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>%  group_by(adr) %>%   filter(adr < 0) %>%   print(n = Inf)
 data %>%  group_by(adr) %>%   filter(adr == 0) %>%   print(n = Inf)
-data %>%  group_by(adr) %>%   filter(adr > 550) %>%   print(n = Inf)
+data %>%  group_by(adr) %>%   filter(adr > 400) %>%   print(n = Inf)
 
 
 summary(data$required_car_parking_spaces)
 plot(data$required_car_parking_spaces)
 qqnorm(data$required_car_parking_spaces)
-ggplot(data, aes(x=log(required_car_parking_spaces))) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=log(required_car_parking_spaces))) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>%  group_by(required_car_parking_spaces) %>%   filter(required_car_parking_spaces > 2) %>%   print(n = Inf)
 
@@ -206,8 +206,8 @@ data %>%  group_by(required_car_parking_spaces) %>%   filter(required_car_parkin
 summary(data$total_of_special_requests)
 plot(data$total_of_special_requests)
 qqnorm(data$total_of_special_requests)
-ggplot(data, aes(x=total_of_special_requests)) + 
-  geom_boxplot(fill = "#16ec73")
+# ggplot(data, aes(x=total_of_special_requests)) + 
+#   geom_boxplot(fill = "#16ec73")
 
 data %>%  group_by(total_of_special_requests) %>%   filter(total_of_special_requests > 3) %>%   print(n = Inf)
 

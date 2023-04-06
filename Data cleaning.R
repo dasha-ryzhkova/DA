@@ -19,7 +19,7 @@ data <-  filter(data, stays_in_nights != 0)
 data$required_car_parking_spaces[data$required_car_parking_spaces > 2] <- 2
 
 data <-  filter(data, adr > 0)
-data <-  filter(data, adr < 550)
+data <-  filter(data, adr < 400)
 
 data <-  filter(data, babies < 5)
 data <-  filter(data, children < 10)
