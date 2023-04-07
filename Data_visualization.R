@@ -112,7 +112,7 @@ plot(data$stays_in_weekend_nights)
 qqnorm(data$stays_in_weekend_nights)
 # ggplot(data, aes(x=stays_in_weekend_nights)) + 
 #   geom_boxplot(fill = "#16ec73")
-#data %>%  select(stays_in_weekend_nights) %>% filter(stays_in_weekend_nights > 10) %>%   print(n = Inf)
+data %>%  group_by(stays_in_weekend_nights) %>% filter(stays_in_weekend_nights > 10) %>%   print(n = Inf)
 
 #data %>%  select(lead_time, arrival_date_day_of_month, arrival_date_month, arrival_date_year,  stays_in_weekend_nights, stays_in_week_nights, reservation_status, reservation_status_date) %>% filter(stays_in_weekend_nights > 10)
 #data %>% filter(reservation_status != 'Canceled') %>%  nrow()
