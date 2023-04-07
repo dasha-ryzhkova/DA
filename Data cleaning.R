@@ -5,7 +5,8 @@ library("stringr")
 data <- read.csv('hotel_bookings.csv')
 data$children[is.na(data$children)] = round(mean(data$children, na.rm = TRUE),0)
 
-data <- mutate(data, all_guests = adults + children + babies)             
+data <- mutate(data, all_guests = adults + children + babies)   
+data <- mutate(data, all_children = children + babies)  
 data <-  filter(data, all_guests != 0) 
 
 data <- data %>% select(-c(agent, company))
