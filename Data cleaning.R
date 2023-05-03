@@ -33,3 +33,25 @@ data <-  filter(data, country != 'NULL')
 
 colSums(is.na(data))
 dim(data)
+
+#data conversion into required formats
+data$hotel <- as.factor(data$hotel)
+data$is_canceled <- as.factor(data$is_canceled)
+data$arrival_date_year <- as.factor(data$arrival_date_year)
+data$arrival_date_month <- factor(data$arrival_date_month, 
+                                  levels = c("January", "February", "March", "April", "May", 
+                                             "June", "July", "August", "September", 
+                                             "October", "November", "December"))
+data$arrival_date_week_number <- factor(data$arrival_date_week_number)
+data$arrival_date_day_of_month <- factor(data$arrival_date_day_of_month)
+data$meal <- factor(data$meal)
+data$country <- factor(data$country)
+data$market_segment <- factor(data$market_segment)
+data$distribution_channel <- factor(data$distribution_channel)
+data$is_repeated_guest <- factor(data$is_repeated_guest)
+data$reserved_room_type <- factor(data$reserved_room_type)
+data$assigned_room_type <- factor(data$assigned_room_type)
+data$deposit_type <- factor(data$deposit_type)
+data$customer_type <- factor(data$customer_type)
+data$reservation_status <- factor(data$reservation_status)
+
