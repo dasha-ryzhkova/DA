@@ -28,6 +28,7 @@ data7 <- data  %>% filter(days_in_waiting_list < 200)
 #total_of_special_requests
 data8 <- data  %>% filter(total_of_special_requests < 3)
 
+#country
 data9 <- data  %>% filter(country != 'PRT', country != 'CHN')
 
 data9 %>% 
