@@ -24,6 +24,7 @@ ggplot(relative_data, aes(fill = hotel, x = country, y = percentage)) +
         axis.text = element_text(size = 10),
         legend.title = element_text(size = 10),
         legend.text = element_text(size = 10))
+
 relative_data
 
 ggplot(relative_data, aes(fill = hotel, x = country, y = log(n))) +
