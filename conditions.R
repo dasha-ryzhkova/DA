@@ -28,11 +28,11 @@ data7 <- data  %>% filter(days_in_waiting_list < 200)
 #total_of_special_requests
 data8 <- data  %>% filter(total_of_special_requests < 3)
 
-data9 <- data  %>% filter(country != 'PRT')
+data9 <- data  %>% filter(country != 'PRT', country != 'CHN')
 
 data9 %>% 
   filter(is_canceled == 0) %>%
   group_by(country) %>%  
   summarise(booking_count = n()) %>%
   arrange(desc(booking_count)) %>%
-  head(10)
+  head(15)
