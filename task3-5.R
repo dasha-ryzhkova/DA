@@ -24,7 +24,6 @@ ggplot(meal_data, aes(fill = with_children, x = meal, y = log(n))) +
         legend.title = element_text(size = 10),
         legend.text = element_text(size = 10))
 
-
 ggplot(meal_data, aes(fill = with_children, x = meal, y = n)) +
   geom_bar(position="stack", stat="identity")+
   labs(x = "Тип харчування", y = "Бронювання", fill='З/без дітей') +
@@ -33,6 +32,7 @@ ggplot(meal_data, aes(fill = with_children, x = meal, y = n)) +
         axis.text = element_text(size = 10),
         legend.title = element_text(size = 10),
         legend.text = element_text(size = 10))
+
 
 
 room_data <- without_children %>%  select(c(reserved_room_type, with_children))
@@ -91,4 +91,7 @@ ggplot(distribution_data, aes(fill = with_children, x = distribution_channel, y 
         legend.text = element_text(size = 10))
 
 
-
+datamm <- data.frame(
+  name=c( rep("A",500), rep("B",500), rep("B",500), rep("C",20), rep('D', 100)  ),
+  value=c( rnorm(500, 10, 5), rnorm(500, 13, 1), rnorm(500, 18, 1), rnorm(20, 25, 4), rnorm(100, 12, 1) )
+)
